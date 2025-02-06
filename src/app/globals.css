@@ -1,6 +1,16 @@
+/* Move @import statements to the very top */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap');
+
+/* Tailwind directives must come after @import */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Now define your CSS rules */
+:root {
+  --primary-color: #ff5733;
+}
 
 body::before {
   content: "";
@@ -17,6 +27,7 @@ body::before {
   width: 100%;
   z-index: -1;
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
